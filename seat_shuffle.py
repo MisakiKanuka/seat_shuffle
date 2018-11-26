@@ -13,7 +13,7 @@ Table1: 横川 中川 鹿糠 美香子 大江 内田
 Table2: 吉田 則也 中俣 川合 三村
 Table3: 高橋 工藤 松本 杉村
 
-[ ] members.txt から全員の名前を取得して表示する
+[x] members.txt から全員の名前を取得して表示する
     - [ ] members.txt から全員の名前を取得して random に 表示する
 
 [ ] Table1 に 全員入れる
@@ -27,9 +27,13 @@ Table3: 高橋 工藤 松本 杉村
 
 def main():
     with open("members.txt", mode="r") as f:
-        members_list = f.read()
+        members_list = [f.read]
+
+    # \n を "," したい！！！！！！！！！！
 
     print(members_list)
+
+    # random.choice(('xxx', 'yyy', 'zzz'))
 
     f.closed
 
