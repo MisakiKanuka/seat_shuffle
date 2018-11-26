@@ -24,21 +24,38 @@ Table3: 高橋 工藤 松本 杉村
 
 """
 
+import random
 
 def main():
     with open("members.txt", mode="r") as f:
         members_list = f.read()
-        print(members_list)
+        # print(members_list)
 
         members_csv = ",".join(members_list.splitlines())
-        print(members_csv)
+        # print(members_csv)
 
         members = members_csv.split(",")
-        print(members)
+        # print(members)
 
-    # random.choice(('xxx', 'yyy', 'zzz'))
+        # 15回繰り返す
+        # members から 名前を取ってくる
+        # 名前を取ってきたら Table にいれる
+        # Table1 は 6人
+        # Table2 は 5人
+        # Table3 は 4人
 
-    print(f.closed)
+        table1 = []
+
+        for member in members:
+            table1.append(member)
+
+            # print(member)
+
+            print(f"Table1: {table1}")
+            # print(f"Table2: {member}")
+            # print(f"Table3: {member}")
+
+    f.closed
 
 
 if __name__ == "__main__":
