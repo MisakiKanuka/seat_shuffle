@@ -26,8 +26,12 @@ Table3: 高橋 工藤 松本 杉村
 
 
 def main():
-    pass
+    with open("members.txt", mode="r") as f:
+        members_list = f.read()
 
+    print(members_list)
+
+    f.closed
 
 if __name__ == "__main__":
     main()
