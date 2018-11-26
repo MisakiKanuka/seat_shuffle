@@ -29,9 +29,7 @@ import random
 
 def main():
     with open("members.txt", mode="r") as f:
-        members_list = f.read()
-
-        members_csv = ",".join(members_list.splitlines())
+        members_csv = ",".join(f.read().splitlines())
 
         members = random.sample(members_csv.split(","), 15)
 
@@ -50,7 +48,7 @@ def main():
 
         for member in members:
 
-            count = count + 1
+            count += 1
 
             if count <= 6:
                 table1.append(member)
