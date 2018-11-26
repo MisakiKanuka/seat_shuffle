@@ -27,15 +27,19 @@ Table3: 高橋 工藤 松本 杉村
 
 def main():
     with open("members.txt", mode="r") as f:
-        members_list = [f.read]
+        members_list = f.read()
+        print(members_list)
 
-    # \n を "," したい！！！！！！！！！！
+        members_csv = ",".join(members_list.splitlines())
+        print(members_csv)
 
-    print(members_list)
+        members = members_csv.split(",")
+        print(members)
 
     # random.choice(('xxx', 'yyy', 'zzz'))
 
-    f.closed
+    print(f.closed)
+
 
 if __name__ == "__main__":
     main()
