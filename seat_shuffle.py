@@ -26,6 +26,7 @@ Table3: 高橋 工藤 松本 杉村
 
 import random
 
+
 def main():
     with open("members.txt", mode="r") as f:
         members_list = f.read()
@@ -45,15 +46,29 @@ def main():
         # Table3 は 4人
 
         table1 = []
+        table2 = []
+        table3 = []
+
+        count = 0
 
         for member in members:
-            table1.append(member)
+
+            count = count + 1
+
+            if count <= 6:
+                table1.append(member)
+            elif count <= 11:
+                table2.append(member)
+            else:
+                table3.append(member)
 
             # print(member)
 
-            print(f"Table1: {table1}")
-            # print(f"Table2: {member}")
-            # print(f"Table3: {member}")
+        print(f"Table1: {table1}")
+        print(f"Table2: {table2}")
+        print(f"Table3: {table3}")
+        # print(f"Table2: {member}")
+        # print(f"Table3: {member}")
 
     f.closed
 
