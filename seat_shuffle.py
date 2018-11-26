@@ -16,16 +16,21 @@ Table3: 高橋 工藤 松本 杉村
 [x] members.txt から全員の名前を取得して表示する
     - [ ] members.txt から全員の名前を取得して random に 表示する
 
-[ ] Table1 に 全員入れる
-    - [ ] Table1 に 6人 あとは Table2 にいれる
-    - [ ] Table2 に 5人 あとは Table3 にいれる
+[x] Table1 に 全員入れる
+    - [x] Table1 に 6人 あとは Table2 にいれる
+    - [x] Table2 に 5人 あとは Table3 にいれる
 
-[ ] Table を 全て print する
+[x] Table を 全て print する
 
 """
 
 import random
 
+
+# l = [0, 1, 2, 3, 4]
+
+# print(random.sample(l, 3))
+# [1, 3, 2]
 
 def main():
     with open("members.txt", mode="r") as f:
@@ -35,7 +40,7 @@ def main():
         members_csv = ",".join(members_list.splitlines())
         # print(members_csv)
 
-        members = members_csv.split(",")
+        members = random.sample(members_csv.split(","), 15)
         # print(members)
 
         # 15回繰り返す
